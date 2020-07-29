@@ -8,22 +8,73 @@
 	display: -ms-flex;
 	display: flex;
 
-	flex-wrap: -webkit-flex;
-	flex-wrap: -ms-flex;
+	flex-wrap: -webkit-wrap;
+	flex-wrap: -ms-wrap;
 	flex-wrap: wrap;
 
-	justify-content: space-around;
+	align-self: center;
+	justify-content: center;
+
+}
+
+.image-banner{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+
+	justify-content: center;
+}
+
+.margin-box{
+	margin: 0% 20%;
+}
+
+.box{
+	/* -webkit-flex older browser -ms-flex IE */
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+
+	/* No wrap for images to sit next to each other in desktop mode
+	flex-wrap: -webkit-wrap;
+	flex-wrap: -ms-wrap;
+	flex-wrap: wrap;
+	*/
+
+	align-self: center;
+	justify-content: space-between;
 }
 
 
+/* wireframe images*/
 .items{
 	margin: 0.5rem;
-	flex: 1 1 auto;
+	flex: 2 1 auto;
 }
 
 .item-img{
 	margin: 0.5rem;
-	flex: 3 1 400px;
+	flex: 1 1 500px;
 }
 
+.items-2{
+	margin: 0.5rem;
+	flex: 1 1 60%;
+}
+
+.item-img-2{
+	margin: 0.5rem;
+	flex: 3 1 auto;
+}
+/* actual site */
+
+.container-item{
+	margin: 1rem 2rem;
+	flex: 0 1 auto;
+}
+
+.container-img{
+	margin: 1rem 0.2rem;
+	flex: 0 1 auto;
+}
 

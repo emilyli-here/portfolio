@@ -1,11 +1,11 @@
 html{
 	font-family: 'Poppins', sans-serif;
-	margin: 1rem;
 	font-size: 1rem;
 	font-weight: 300;
 }
 
-h1,h2,h3,h4{
+
+h1,h2,h3,h4,h5{
 	/*** 
 	weight reference
 	600 is semi-bold
@@ -14,8 +14,18 @@ h1,h2,h3,h4{
 	300 is light
 	200 is extra light 
 	 ***/
-	font-weight: 500;
+	font-weight: 400;
 }
+
+a{
+	text-decoration: none;
+	color: #98A7AC;
+}
+
+img{
+	max-width: 100%;
+}
+
 
 /********* Colour Branding *********/
 .colour-sample{
@@ -36,7 +46,7 @@ h1,h2,h3,h4{
 
 .apricot{
 	background-color: #F6C270;
-	color: #F8F8F6;
+	color: black;
 }
 
 .pink{
@@ -56,12 +66,8 @@ h1,h2,h3,h4{
 
 
 /********* Wireframes *********/
-p{
-	max-width: 30rem;
-}
 
-img{
-	max-width: 100%;
+.shadow{
 	/**** To stand out in the white BG****/
 	-webkit-box-shadow: 
 	0 1.1px 7.4px rgba(0, 0, 0, 0.028),
@@ -76,3 +82,340 @@ img{
 	0 12.3px 25px rgba(0, 0, 0, 0.032),
 	0 77px 112px rgba(0, 0, 0, 0.07);
 }
+
+
+
+
+/********* index.html nav & footer *********/
+
+.nav-item{
+	text-decoration: none;
+	padding: 2rem 2rem;
+	color: black;
+	z-index: 10;
+}
+
+.nav-item::after{
+	content: '';
+    display: block;
+    width: 0;
+    height: 0.07rem;
+    background: #000;
+    transition: width .3s;
+}
+.nav-item:hover::after, .nav-item:focus::after{
+	width: 100%;
+}
+/* White text version of nav */
+
+.nav-item-white{
+	text-decoration: none;
+	padding: 2rem 2rem;
+	color: #F8F8F6;
+	z-index: 10;
+}
+
+.nav-item-white::after{
+	content: '';
+    display: block;
+    width: 0;
+    height: 0.07rem;
+    background: #F8F8F6;
+    transition: width .3s;
+}
+
+.nav-item-white:hover::after, .nav-item-white:focus::after{
+	width: 100%;
+}
+
+.img-hover{
+    transition: background .3s ease-in, transform .3s ease-out;
+}
+.img-hover:hover{
+	transform: scale(1.05);
+}
+
+footer{
+	width: 100%;
+	background-color: black;
+	position: relative;
+	margin: 0;
+	padding: 2rem 0 2rem 0;
+}
+
+/************ video header ***************/
+
+.video-header{
+	position: relative;
+	width: 100%;
+	height: 50vh;
+	margin: auto;
+
+	overflow: hidden;
+}
+
+video{
+	width: 100%;
+
+}
+
+.header-text{
+	text-align: center;
+	padding: 0.5rem;
+	margin: 1rem;
+	z-index: 10;
+	color: white;
+
+	align-self: flex-end;
+}
+.header-text h1{
+	margin: 0;
+	font-size: 3rem;
+}
+
+.header-text p{
+	margin: 0;
+}
+
+.video-box{
+	position: absolute;
+	width:100%;
+}
+
+.overlay{
+	position: absolute;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+}
+
+
+/************ Projects index.html ***************/
+.project{
+	margin: 5rem 10rem;
+	height: 40vh;
+	position: relative;
+
+	overflow: hidden;
+}
+
+.project h2{
+	color: white;
+	
+	z-index: 10;
+}
+
+
+.image-banner img{
+	max-width: 50%;
+	height: auto;
+}
+
+/************ project detail pages ***************/
+
+.header{
+	position: relative;
+	width: 100%;
+	height: 40vh;
+}
+.colour-header{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+}
+.title h1{
+	color: white;
+	text-align: center;
+}
+
+.title{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	
+}
+
+.content{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.content h2, .content h3{
+	margin: 0;
+	margin-top: 4rem;
+}
+
+.content p {
+	margin: 0;
+	margin-top: 1rem;
+	line-height: 2rem;
+}
+
+.img-script{
+	max-width: 400px;
+}
+
+.project-section{
+	margin: 5rem 0;
+}
+
+
+
+/***** scroll photos *******/
+
+.photo-slider {
+  width: 300px;
+  overflow: hidden;
+}
+
+.photo-slides {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+
+	overflow-x: auto;
+	/* this allows users to hit the exact spot for each photo*/
+	scroll-snap-type: x mandatory;
+
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+
+
+  }
+
+/* scrollbar */
+.photo-slides::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+.photo-slides::-webkit-scrollbar-thumb {
+	background-color: #F6C270;
+	/*border-radius: 10px;*/
+}
+.photo-slides::-webkit-scrollbar-track {
+	background-color: #98A7AC;
+	/*border-radius: 10px;*/
+}
+.photo-slides > div {
+	scroll-snap-align: start;
+	flex-shrink: 0;
+	width: 300px;
+	height: 400px;
+	margin-right: 50px;
+	border-radius: 10px;
+	background: #eee;
+	transform-origin: center center;
+	transform: scale(1);
+	transition: transform 0.5s;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.photo-slides > div:target {
+	/*   transform: scale(0.8); */
+}
+
+
+.photo-slides img {
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.back-to-top{
+	margin:2rem 0;
+}
+
+#button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 1;
+  z-index: 1000;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+}
+#button:active {
+  background-color: #555;
+}
+
+
+/************ About Moi***************/
+
+#contact{
+	padding: 3rem 0;
+}
+
+.about-me-img{
+	width: 300px;
+	height: 400px;
+	overflow: hidden;
+	margin-top: 3rem;
+	position: relative;
+}
+
+.about-me-img img{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50%;
+    margin-top: -70%;
+}
+
+
+.about-content{
+	padding-left: 2rem;
+	position: relative;
+}
+
+.about-content p{
+	line-height: 2rem;
+}
+
+.about-content h2{
+	margin-top: 3rem;
+}
+
+.colour-blk{
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	top:15%;
+	left: 15%;
+	z-index: -1;
+}
+
+.contact-link{
+	text-decoration: none;
+	color: #98A7AC;
+	z-index: 10;
+}
+
+.contact-link::after{
+	content: '';
+    display: block;
+    width: 0;
+    height: 0.07rem;
+    background: #98A7AC;
+    transition: width .3s;
+}
+.contact-link:hover::after, .contact-link:focus::after{
+	width: 100%;
+}
+
