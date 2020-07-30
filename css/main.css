@@ -20,6 +20,7 @@ h1,h2,h3,h4,h5{
 a{
 	text-decoration: none;
 	color: #98A7AC;
+	text-align: center;
 }
 
 img{
@@ -138,9 +139,15 @@ img{
 footer{
 	width: 100%;
 	background-color: black;
+	color: #98A7AC;
 	position: relative;
 	margin: 0;
 	padding: 2rem 0 2rem 0;
+}
+
+footer a, footer p{
+	margin: 0.5rem 1rem;
+	text-align: center;
 }
 
 /************ video header ***************/
@@ -148,7 +155,6 @@ footer{
 .video-header{
 	position: relative;
 	width: 100%;
-	height: 50vh;
 	margin: auto;
 
 	overflow: hidden;
@@ -156,18 +162,8 @@ footer{
 
 video{
 	width: 100%;
-
 }
 
-.header-text{
-	text-align: center;
-	padding: 0.5rem;
-	margin: 1rem;
-	z-index: 10;
-	color: white;
-
-	align-self: flex-end;
-}
 .header-text h1{
 	margin: 0;
 	font-size: 3rem;
@@ -193,229 +189,119 @@ video{
 
 /************ Projects index.html ***************/
 .project{
-	margin: 5rem 10rem;
-	height: 40vh;
 	position: relative;
-
 	overflow: hidden;
 }
 
 .project h2{
 	color: white;
-	
 	z-index: 10;
 }
-
+.image-banner {
+	width: 100%;
+}
 
 .image-banner img{
 	max-width: 50%;
 	height: auto;
 }
 
-/************ project detail pages ***************/
 
-.header{
-	position: relative;
-	width: 100%;
-	height: 40vh;
-}
-.colour-header{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top:0;
-}
-.title h1{
-	color: white;
-	text-align: center;
-}
-
-.title{
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	
-}
-
-.content{
-	position: relative;
-	width: 100%;
-	height: auto;
-}
-
-.content h2, .content h3{
-	margin: 0;
-	margin-top: 4rem;
-}
-
-.content p {
-	margin: 0;
-	margin-top: 1rem;
-	line-height: 2rem;
-}
-
-.img-script{
-	max-width: 400px;
-}
-
-.project-section{
-	margin: 5rem 0;
-}
-
-
-
-/***** scroll photos *******/
-
-.photo-slider {
-  width: 300px;
-  overflow: hidden;
-}
-
-.photo-slides {
-	display: -webkit-flex;
-	display: -ms-flex;
-	display: flex;
-
-	overflow-x: auto;
-	/* this allows users to hit the exact spot for each photo*/
-	scroll-snap-type: x mandatory;
-
-	scroll-behavior: smooth;
-	-webkit-overflow-scrolling: touch;
-
-
-  }
-
-/* scrollbar */
-.photo-slides::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
-}
-.photo-slides::-webkit-scrollbar-thumb {
-	background-color: #F6C270;
-	/*border-radius: 10px;*/
-}
-.photo-slides::-webkit-scrollbar-track {
-	background-color: #98A7AC;
-	/*border-radius: 10px;*/
-}
-.photo-slides > div {
-	scroll-snap-align: start;
-	flex-shrink: 0;
-	width: 300px;
-	height: 400px;
-	margin-right: 50px;
-	border-radius: 10px;
-	background: #eee;
-	transform-origin: center center;
-	transform: scale(1);
-	transition: transform 0.5s;
-	position: relative;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.photo-slides > div:target {
-	/*   transform: scale(0.8); */
-}
-
-
-.photo-slides img {
-	object-fit: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-
+/************ project detail general css ***************/
 .back-to-top{
 	margin:2rem 0;
+}
+.btn{
+	margin:1rem 0;
 }
 
 #button {
   width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
   
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  opacity: 1;
-  z-index: 1000;
 }
 
-#button:hover {
-  cursor: pointer;
-  background-color: #333;
-  color: white;
-}
 #button:active {
   background-color: #555;
 }
 
-
-/************ About Moi***************/
-
-#contact{
-	padding: 3rem 0;
+#modalImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.about-me-img{
-	width: 300px;
-	height: 400px;
-	overflow: hidden;
-	margin-top: 3rem;
-	position: relative;
+#modalImg:hover {
+	opacity: 0.7;
 }
 
-.about-me-img img{
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -50%;
-    margin-top: -70%;
+/************ Modal BG ***************/
+.modalStyle{
+	display: none; /* Hidden*/
+	position: fixed;
+	z-index: 1;
+	padding-top: 120px;
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.9);
 }
 
-
-.about-content{
-	padding-left: 2rem;
-	position: relative;
+.modal-content{
+	margin: auto;
+	display: block;
 }
 
-.about-content p{
-	line-height: 2rem;
+/* Caption of Modal Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
 }
 
-.about-content h2{
-	margin-top: 3rem;
+/* Animation Zoom In */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+
 }
 
-.colour-blk{
-	position: absolute;
-	width: 100%;
-	height: 80%;
-	top:15%;
-	left: 15%;
-	z-index: -1;
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
 }
 
-.contact-link{
-	text-decoration: none;
-	color: #98A7AC;
-	z-index: 10;
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
 }
 
-.contact-link::after{
-	content: '';
-    display: block;
-    width: 0;
-    height: 0.07rem;
-    background: #98A7AC;
-    transition: width .3s;
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
 }
-.contact-link:hover::after, .contact-link:focus::after{
-	width: 100%;
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 

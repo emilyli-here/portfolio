@@ -1,0 +1,95 @@
+/************ General left and right margin ***************/
+.margin-box{
+	margin: 0% 3%;
+}
+
+/************ Video index.html ***************/
+.video-header{
+	height: 45vh;
+}
+
+.header-text{
+	text-align: center;
+	padding: 0.5rem;
+	margin: 1rem 1rem 0 1rem;
+	z-index: 10;
+	color: black;
+
+	align-self: flex-end;
+}
+
+/*
+.overlay{
+	display: none;
+}
+*/
+
+/************ Projects index.html ***************/
+.project{
+	margin: 2rem 0.5rem;
+	height: 20vh;
+}
+
+/************ project detail pages ***************/
+
+.header{
+	position: relative;
+	width: 100%;
+	height: 40vh;
+}
+.colour-header{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+}
+.title h1{
+	color: white;
+	text-align: center;
+}
+
+.title{
+	position: absolute;
+	margin: 0 1rem;
+	bottom: 0;
+}
+
+.content{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.content h2, .content h3{
+	margin: 0;
+	margin-top: 4rem;
+}
+
+.content p {
+	margin: 0;
+	margin-top: 0.5rem;
+	line-height: 2rem;
+}
+
+.img-script{
+	max-width: 400px;
+}
+
+.project-section{
+	margin: 5rem 0;
+}
+
+/******* MODAL ******/
+/* 100% Image on Smaller Screens  for MODAL popup*/
+.modal-content {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
