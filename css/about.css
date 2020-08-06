@@ -37,6 +37,7 @@
 	text-decoration: none;
 	color: #98A7AC;
 	z-index: 10;
+	margin: 0 2rem;
 }
 
 .contact-link::after{
@@ -49,6 +50,17 @@
 }
 .contact-link:hover::after, .contact-link:focus::after{
 	width: 100%;
+}
+
+/******* make sure footer is at the bottom **********/
+footer {
+	margin-top: 5rem;
+}
+
+/* For citations area */
+.fixed-to-bottom{
+	position: fixed;
+	bottom: 0;
 }
 
 @media(min-width: 55rem){

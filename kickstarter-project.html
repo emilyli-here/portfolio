@@ -6,26 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/widescreen.css" media="(min-width:55rem)">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:30rem)">
+	<link rel="stylesheet" type="text/css" href="css/widescreen.css" media="(min-width:50rem)">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:50rem)">
 	<link rel="stylesheet" type="text/css" href="css/flexbox.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+	<link rel="icon" href="img/temp-old.svg" type="image/svg+xml">
 
 
 </head>
 <body>
-	<section class="header">
-		<nav class="container">
+	<header>
+		<nav class="container teal">
 			<a href="index.html" class="nav-item-white">PROJECTS</a>
 			<a href="about.html" class="nav-item-white">ABOUT</a>
 		</nav>
 		
-		<div class="colour-header teal"></div>
-		<div class="title">
-			<h1 class="title-item">Kickstarter Feature Design</h1>
+		<div class="colour-header teal">
+			<div class="image-banner">
+				<img src="img/Kickstarter-img-banner.png" srcset="img/Kickstarter-img-banner@2x.png 3200w, img/Kickstarter-img-banner@800w.png 800w">
+			</div>
+			<h1 class="title">Kickstarter Feature Design</h1>
 		</div>
-
-	</section>
+	</header>
 	
 
 	<section class="content" id="Content">
@@ -61,7 +63,7 @@
 
 			<!-- Banner Image (kinda) -->
 			<div> 
-				<img src="img/kickstarter-1.png" onclick="modalFunction(this.id)" id="modalImg" alt="Sample of 4 different frames I designed">
+				<img src="img/kickstarter-1.png" onclick="modalFunction(this.id)" id="modalImg" alt="Sample of 4 different frames I designed" srcset="img/kickstarter-1@72ppi.png 800w, img/kickstarter-1@144ppi.png 1600w" class="modal">
 			</div>
 
 			<section id="beginning process" class="project-section">
@@ -70,6 +72,17 @@
 					<p>
 						From our research on the Kickstarter app, we wanted to create something that is unique to the app and not just a feature on the website that is re-created on the app. The most prominent idea that was well-liked by the teaching team and our peers was a feature for users to keep track of the pledge spending: The Pledge Tracker.
 					</p>
+				</div>
+
+				<div class="box">
+					<figure class="container-img">
+						<img src="img/kickstarter-5.png" onclick="modalFunction(this.id)" id="modalImg5" alt="Kickstarter Current Design on a iPhone 6" srcset="img/kickstarter-5@72ppi.png 400w, img/kickstarter-5@144ppi.png 800w" class="modal">
+						<figcaption>Current Kickstarter App: My goal is to explore the current features of the app and try to bring those designs and consistency through to our feature design.</figcaption>
+					</figure>
+					<figure class="container-img">
+						<img src="img/kickstarter-6.png" onclick="modalFunction(this.id)" id="modalImg6" alt="A sample of some drawing iterations done for the feature design" srcset="img/kickstarter-6@72ppi.png 495w, img/kickstarter-6@144ppi.png 991w" class="modal">
+						<figcaption>A few samples of my first iteration design to make a calendar view of user's back projects.</figcaption>
+					</figure>
 				</div>
 
 			</section>
@@ -81,8 +94,8 @@
 					</p>
 				</div>
 
-				<div>
-					<img src="img/kickstarter-2.png" onclick="modalFunction(this.id)" id="modalImg2" alt="Interactive Feature: Here it shows users can see the breakdown of where their money goes towards and a visual graph of how much of their money goes towards fees.">
+				<div class="container-img">
+					<img src="img/kickstarter-2.png" onclick="modalFunction(this.id)" id="modalImg2" alt="Interactive Feature: Here it shows users can see the breakdown of where their money goes towards and a visual graph of how much of their money goes towards fees." srcset="img/kickstarter-2@72ppi.png 800w" class="modal">
 				</div>
 				
 			</section>
@@ -99,10 +112,10 @@
 				<!-- Images -->
 				<div class="box">
 					<div class="container-img">
-						<img src="img/kickstarter-3.png" onclick="modalFunction(this.id)" id="modalImg3" alt="Screenshot of how the user can view ongoing projects, their campaign status and how much the user will pledge to them if the project reaches the pledge goal">
+						<img src="img/kickstarter-3.png" onclick="modalFunction(this.id)" id="modalImg3" alt="Screenshot of how the user can view ongoing projects, their campaign status and how much the user will pledge to them if the project reaches the pledge goal" srcset="img/kickstarter-3@72ppi.png 400w" class="modal">
 					</div>
 					<div class="container-img">
-						<img src="img/kickstarter-4.png" onclick="modalFunction(this.id)" id="modalImg4" alt="Screenshot of interactive wireflow of a user cancelling their ongoing project.">
+						<img src="img/kickstarter-4.png" onclick="modalFunction(this.id)" id="modalImg4" alt="Screenshot of interactive wireflow of a user cancelling their ongoing project."  srcset="img/kickstarter-4@72ppi.png 400w" class="modal">
 					</div>
 				</div>
 			</section>
@@ -132,11 +145,6 @@
 		<!-- end of Process Section -->
 		
 	</section>
-	
-	
-
-
-	
 
 	<section class="container back-to-top">
 		<div> 
@@ -144,19 +152,27 @@
 		</div>
 	</section>
 
-	
+	<!-- Other projects -->
+	<section class="margin-box">
+		<a class="container img-hover" href="website-project.html">
+			<div class="apricot next-proj-img">
+				<img src="img/website-banner@144ppi.png" alt="website project banner" srcset="img/website-banner@72ppi.png 590w">
+			</div>
+			<div class="next-project white-smoke">
+				<h3>Next Project:</h3>
+				<p>Website Development</p>
+			</div>
+		</a>
+	</section>
 
 	<footer class="container">
 		<a href="styleguide.html"> STYLEGUIDE </a>
-		<a href="film-project.html"> FILM PROJECT </a>
+		<a href="citations.html"> CITATIONS </a>
+		<a href="film-project.html"> BONUS: FILM PROJECT </a>
 		<p>Coded by Emily Li 2020</p>
 	</footer>
 
 	<script type="text/javascript" src="js/main.js"></script>
 	
-
-
-
-
 </body>
 </html>

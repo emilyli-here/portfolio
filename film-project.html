@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/widescreen.css" media="(min-width:55rem)">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:40rem)">
+	<link rel="stylesheet" type="text/css" href="css/widescreen.css" media="(min-width:50rem)">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:50rem)">
 	<link rel="stylesheet" type="text/css" href="css/photoScroll.css">
 	<link rel="stylesheet" type="text/css" href="css/flexbox.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
@@ -15,18 +15,22 @@
 
 </head>
 <body>
-	<section class="header">
-		<nav class="container">
+	<header class="header">
+		<nav class="container apricot">
 			<a href="index.html" class="nav-item-white">PROJECTS</a>
 			<a href="about.html" class="nav-item-white">ABOUT</a>
 		</nav>
 		
-		<div class="colour-header apricot"></div>
-		<div class="title">
-			<h1 class="title-item">Film Project: Finding You</h1>
+		<div class="colour-header apricot">
+			<div class="margin-box">
+				<iframe width="100%" height="500" src="https://www.youtube.com/embed/7WlxPUo0_JM" ></iframe>
+			</div>
+			<div class="title">
+				<h1 class="title-item">Film Project: Finding You</h1>
+			</div>
 		</div>
 
-	</section>
+	</header>
 	
 
 	<section class="content" id="Content">
@@ -64,7 +68,7 @@
 			<!-- Modal https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox -->
 			<div class="container">
 
-				<div class="photo-slider">
+				<figure class="photo-slider">
 					<h3>Location Scouting</h3>
 					<div class="photo-slides">
 						<div id="slide-1">
@@ -80,9 +84,10 @@
 							<img src="img/location-scout4.jpg">
 						</div>
 					</div>
-				</div>
-			</div>
+					<figcaption>Scroll Horizontally or use click the yellow scroll bar at the bottom</figcaption>
+				</figure>
 
+			</div>
 
 			<div class="container-item">
 				<h2>Pre-Production</h2>
@@ -152,7 +157,6 @@
 			
 		</div>
 		<!-- end of Written Section -->
-		
 	</section>
 
 	<section class="container back-to-top">
@@ -161,17 +165,36 @@
 		</div>
 	</section>
 
-	
+	<!-- Other projects -->
+	<section class="margin-box">
+		<a class="container img-hover" href="website-project.html">
+			<div class="apricot next-proj-img">
+				<img src="img/website-banner@144ppi.png" alt="website project banner" srcset="img/website-banner@72ppi.png 590w">
+			</div>
+			<div class="next-project white-smoke">
+				<h3>Other Project:</h3>
+				<p>Website Development</p>
+			</div>
+		</a>
+		<a class="container img-hover" href="kickstarter-project.html">
+			<div class="teal next-proj-img">
+				<img src="img/kickstarter-banner@144ppi.png" alt="Project banner" srcset="img/kickstarter-banner@72ppi.png 480w">
+			</div>
+			<div class="next-project white-smoke">
+				<h3>Other Project:</h3>
+				<p>UX/UI Feature Design</p>
+			</div>
+		</a>
+	</section>
 
 	<footer class="container">
 		<a href="styleguide.html"> STYLEGUIDE </a>
+		<a href="citations.html"> CITATIONS </a>
+		<a href="film-project.html"> BONUS: FILM PROJECT </a>
+		<p>Coded by Emily Li 2020</p>
 	</footer>
-	
-<!-- Testing the back to top button needs to change and edit https://codepen.io/deveb22/pen/QxPmGz-->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+
 	<script type="text/javascript" src="js/main.js"></script>
-
-
 
 </body>
 </html>

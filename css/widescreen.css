@@ -18,36 +18,23 @@
 	align-self: flex-end;
 }
 
+.video-box{
+	position: absolute;
+}
+
 /************ Projects index.html ***************/
 
 .project{
-	margin: 5rem 10rem;
+	margin: 3rem 7rem;
 	height: 40vh;
+}
+
+.content-title{
+	margin-top: 5rem;
 }
 
 /************ project detail pages ***************/
 
-.header{
-	position: relative;
-	width: 100%;
-	height: 40vh;
-}
-.colour-header{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top:0;
-}
-.title h1{
-	color: white;
-	text-align: center;
-}
-
-.title{
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-}
 
 .content{
 	position: relative;
@@ -62,7 +49,7 @@
 
 .content p {
 	margin: 0;
-	margin-top: 1rem;
+	margin-top: 0;
 	line-height: 2rem;
 }
 
@@ -73,14 +60,15 @@
 .project-section{
 	margin: 5rem 0;
 }
+
+/* Larger desktop size style for colour header img */
+.colour-header img{
+	width: 40%;
+	height: 40%;
+	margin-top: 5%;
+}
+
 /******* Modal *********/
 .modal-content{
 	width: 80%;
-}
-
-/*** #button active on main, hover and focus here cause useless on mobile ***/
-#button:hover, #button:focus {
-  cursor: pointer;
-  background-color: #333;
-  color: white;
 }

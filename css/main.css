@@ -27,6 +27,10 @@ img{
 	max-width: 100%;
 }
 
+figcaption{
+	font-size: 0.8rem;
+}
+
 
 /********* Colour Branding *********/
 .colour-sample{
@@ -129,13 +133,6 @@ img{
 	width: 100%;
 }
 
-.img-hover{
-    transition: background .3s ease-in, transform .3s ease-out;
-}
-.img-hover:hover{
-	transform: scale(1.05);
-}
-
 footer{
 	width: 100%;
 	background-color: black;
@@ -174,7 +171,6 @@ video{
 }
 
 .video-box{
-	position: absolute;
 	width:100%;
 }
 
@@ -187,7 +183,11 @@ video{
 }
 
 
-/************ Projects index.html ***************/
+/************ Projects on index.html ***************/
+.content-title{
+	text-align: center;
+}
+
 .project{
 	position: relative;
 	overflow: hidden;
@@ -203,11 +203,25 @@ video{
 
 .image-banner img{
 	max-width: 50%;
-	height: auto;
+	height: 50%;
 }
 
+.img-hover{
+    transition: background .3s ease-in, transform .3s ease-out;
+}
+.img-hover:hover{
+	transform: scale(1.05);
+}
 
 /************ project detail general css ***************/
+.title{
+	color: white;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	padding: 1rem 0;
+}
+
 .back-to-top{
 	margin:2rem 0;
 }
@@ -220,21 +234,55 @@ video{
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color .3s, opacity .5s, visibility .5s;
-  
 }
 
 #button:active {
   background-color: #555;
 }
 
-#modalImg {
+#button:hover, #button:focus {
+  cursor: pointer;
+  cursor: hand;
+  background-color: #333;
+  color: white;
+}
+
+.colour-header{
+	position: relative;
+	width: 100%;
+	height: auto;
+	top:0;
+	
+}
+
+/* Next Project */
+.next-proj-img{
+	overflow: hidden;
+	max-height: 200px;
+	padding-top: 0.7rem;
+}
+
+.next-project{
+	text-align: left;
+}
+
+
+.modal{
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-#modalImg:hover {
+.modal:hover {
 	opacity: 0.7;
+}
+
+iframe{
+	border: none;
+}
+
+figure{
+	margin: 0;
 }
 
 /************ Modal BG ***************/
@@ -274,7 +322,6 @@ video{
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
-
 }
 
 @-webkit-keyframes zoom {

@@ -1,3 +1,4 @@
+'use strict';
 // Jquery version
 // var btn = $('#button');
 
@@ -5,7 +6,6 @@
 //   e.preventDefault();
 //   $('html, body').animate({scrollTop:0}, '300');
 // });
-
 
 // pure js no jquery needed scroll
 function scrollToTop(){
@@ -15,7 +15,6 @@ function scrollToTop(){
          window.scrollTo (0,currentScroll - (currentScroll/5));
     }
 }
-
 
 //Modal https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
 // Get the modal
@@ -40,7 +39,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside of the modal image, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

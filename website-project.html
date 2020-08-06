@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Film Project</title>
+	<title>Website Project</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/widescreen.css" media="(min-width:55rem)">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:30rem)">
+	<link rel="stylesheet" type="text/css" href="css/widescreen.css" media="(min-width:50rem)">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:50rem)">
 	<link rel="stylesheet" type="text/css" href="css/flexbox.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+	<link rel="icon" href="img/temp-old.svg" type="image/svg+xml">
 
 
 </head>
 <body>
-	<section class="header">
-		<nav class="container">
+	<header>
+		<nav class="container apricot">
 			<a href="index.html" class="nav-item-white">PROJECTS</a>
 			<a href="about.html" class="nav-item-white">ABOUT</a>
 		</nav>
 		
-		<div class="colour-header apricot"></div>
-		<div class="title">
-			<h1 class="title-item">Grocery Vancouver Website</h1>
+		<div class="colour-header apricot">
+			<div class="image-banner">
+				<img src="img/website-img-banner.png" srcset="img/website-img-banner@2x.png 3200w">
+			</div>
+			<div class="title">
+				<h1 class="title-item">Grocery Vancouver Website</h1>
+			</div>
 		</div>
-
-	</section>
+	</header>
 	
 
 	<section class="content" id="Content">
@@ -71,7 +75,7 @@
 				<!-- Images -->
 				<div class="box">
 					<div class="container-img shadow">
-						<img src="img/website-1.png" onclick="modalFunction(this.id)" id="modalImg" alt="Intial Wireflow designs and flaws">
+						<img src="img/website-1.png" onclick="modalFunction(this.id)" id="modalImg" alt="Intial Wireflow designs and flaws" class="modal">
 					</div> 
 				</div>
 			</section>
@@ -87,7 +91,7 @@
 				<!-- Images -->
 				<div class="box">
 					<div class="container-img shadow">
-						<img src="img/website-2.png"  onclick="modalFunction(this.id)" id="modalImg2" alt="Mockup of design">
+						<img src="img/website-2.png"  onclick="modalFunction(this.id)" id="modalImg2" alt="Mockup of design" class="modal">
 					</div> 
 				</div>
 
@@ -106,7 +110,7 @@
 				<!-- Images -->
 				<div class="box">
 					<div class="container-img">
-						<img src="img/website-3.png" onclick="modalFunction(this.id)" id="modalImg3" alt="Coding remotely using GitKraken and understanding the importance of creating notes for other members">
+						<img src="img/website-3.png" onclick="modalFunction(this.id)" id="modalImg3" alt="Coding remotely using GitKraken and understanding the importance of creating notes for other members" class="modal">
 					</div>
 				</div>
 			</section>
@@ -123,7 +127,7 @@
 				<!-- Images -->
 				<div class="box">
 					<div class="container-img shadow">
-						<img src="img/website-4.png" onclick="modalFunction(this.id)" id="modalImg4" alt="The final website landing page.">
+						<img src="img/website-4.png" onclick="modalFunction(this.id)" id="modalImg4" alt="The final website landing page." class="modal">
 					</div>
 				</div>
 			</section>
@@ -154,22 +158,33 @@
 		
 	</section>
 
+	<!-- back to top button https://codepen.io/deveb22/pen/QxPmGz-->
 	<section class="container back-to-top">
 		<div> 
 			<a id="button" class="apricot btn" onclick="scrollToTop()">Back to Top</a>
 		</div>
 	</section>
 
+	<!-- Other projects -->
+	<section class="margin-box">
+		<a class="container img-hover" href="kickstarter-project.html">
+			<div class="teal next-proj-img">
+				<img src="img/kickstarter-banner@144ppi.png" alt="Project banner" srcset="img/kickstarter-banner@72ppi.png 480w">
+			</div>
+			<div class="next-project white-smoke">
+				<h3>Next Project:</h3>
+				<p>UX/UI Feature Design</p>
+			</div>
+		</a>
+	</section>
 	
-
 	<footer class="container">
 		<a href="styleguide.html"> STYLEGUIDE </a>
-		<a href="film-project.html"> FILM PROJECT </a>
+		<a href="citations.html"> CITATIONS </a>
+		<a href="film-project.html"> BONUS: FILM PROJECT </a>
 		<p>Coded by Emily Li 2020</p>
 	</footer>
 	
-<!-- Testing the back to top button needs to change and edit https://codepen.io/deveb22/pen/QxPmGz-->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 	<script type="text/javascript" src="js/main.js"></script>
 
 
