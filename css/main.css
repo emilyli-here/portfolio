@@ -225,24 +225,21 @@ video{
 .back-to-top{
 	margin:2rem 0;
 }
-.btn{
-	margin:1rem 0;
-}
 
-#button {
+.btn {
   width: 100%;
+  margin: 1rem 0;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color .3s, opacity .5s, visibility .5s;
 }
 
-#button:active {
+.btn:active {
   background-color: #555;
 }
 
-#button:hover, #button:focus {
+.btn:hover, .btn:focus {
   cursor: pointer;
-  cursor: hand;
   background-color: #333;
   color: white;
 }
@@ -337,10 +334,10 @@ figure{
 /* The Close Button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 1rem;
+  right: 2rem;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   transition: 0.3s;
 }
